@@ -79,6 +79,7 @@
 						</div> <!-- end row-->
 					</div> <!-- end widget-rounded-circle-->
 				</div> <!-- end col-->
+				
 				<?php endforeach; ?>
 
 				

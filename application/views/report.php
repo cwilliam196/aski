@@ -74,6 +74,7 @@
                                         }else if($report['kategori'] == "2"){
                                             echo "<span class='badge bg-soft-danger text-danger'>Barang Keluar</span>";
                                         } ?>
+										
                                     </td>
                                     <td><?= $report['material_no'] ?></td>
                                     <td><?= $report['job_no'] ?></td>

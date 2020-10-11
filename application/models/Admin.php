@@ -49,6 +49,7 @@ class Admin extends CI_Model {
 		$result = $this->db->get();
 		return $result->result_array();
         // return $this->db->get('data_in');
+        
     }
 
     function countMasuk(){

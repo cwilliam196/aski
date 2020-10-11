@@ -60,6 +60,7 @@
 							<input type="text" class="form-control" placeholder="Label">
 							</div>
 						</div>
+						
 						<br>
 						<div class="row">
 							<div class="col">
@@ -92,7 +93,7 @@
 							<div class="col">
 							<input type="text" class="form-control" placeholder="Part No">
 							</div>
-							
+
 							<div class="col">
 							<input type="text" class="form-control" placeholder="Quantity">
 							</div>
