@@ -92,6 +92,7 @@
 							<div class="col">
 							<input type="text" class="form-control" placeholder="Part No">
 							</div>
+							
 							<div class="col">
 							<input type="text" class="form-control" placeholder="Quantity">
 							</div>
