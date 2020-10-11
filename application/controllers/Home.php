@@ -82,7 +82,14 @@ class home extends CI_Controller {
     }
 
     public function dataBarang(){
-        $this->load->view('dataBarang');
+
+        $data = array(
+            'product' => $this->admin->get_table()
+            
+			
+        );
+
+        $this->load->view('dataBarang',$data);
     }
 
 

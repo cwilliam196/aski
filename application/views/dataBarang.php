@@ -51,6 +51,63 @@
 			<div class="col-xl-12">
 				<div class="card-box">
 				    <!-- <button id="btnScan" data-toggle="modal" data-target="#modalScan" class="btn btn-success btn- mb-4">SCAN BARANG MASUK</button> -->
+					<form>
+						<div class="row">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Material">
+							</div>
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Label">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Job No">
+							</div>
+							<div class="col">
+							<input type="text" class="form-control" placeholder="STL">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Part Name">
+							</div>
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Color">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Type">
+							</div>
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Stock">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Part No">
+							</div>
+							<div class="col">
+							<input type="text" class="form-control" placeholder="Quantity">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col">
+							<input type="text" class="form-control" placeholder="First name">
+							</div>
+							<div class="col">
+							<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</div>
+						</form>
+					<br>
+					
 					<table id="dataTable" class="table table-hover">
 						<thead class="bg-soft-primary">
 							<tr>
@@ -63,16 +120,16 @@
 							</tr>
 						</thead>
 						<tbody>
-                                <!-- <?php foreach($product AS $product) : ?>
+                                <?php foreach($product AS $product) : ?>
                                 <tr>
-                                    <td><?= $product['Material_No'] ?></td>
-                                    <td><?= $product['Job_No'] ?></td>
-                                    <td><?= $product['Tipe'] ?></td>
-                                    <td><?= $product['Part_No'] ?></td>
-                                    <td><?= $product['stock'] ?></td>
-                                    <td><?= $product['uom'] ?></td>
+                                    <td><?= $product['material_no'] ?></td>
+                                    <td><?= $product['job_no'] ?></td>
+                                    <td><?= $product['type'] ?></td>
+                                    <td><?= $product['part_no'] ?></td>
+                                    <td><?= $product['stock_awal'] ?></td>
+                                    <td><?= $product['quantity'] ?></td>
                                 </tr>
-                                <?php endforeach; ?> -->
+                                <?php endforeach; ?>
                         </tbody>
 					</table>
 				</div> <!-- end card-box-->
