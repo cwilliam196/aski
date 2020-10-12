@@ -90,6 +90,24 @@ class home extends CI_Controller {
         );
 
         $this->load->view('dataBarang',$data);
+        $dataB['masterData'] = 'Data Master Barang';
+        $this->form_validation->set_rules('material_no', 'Material_no', 'required');
+        $this->form_validation->set_rules('job_no', 'Job_no', 'required');
+        $this->form_validation->set_rules('type', 'Type', 'required');
+        $this->form_validation->set_rules('part_no', 'Part_no', 'required');
+        $this->form_validation->set_rules('quantity', 'Quantity', 'required');
+        $this->form_validation->set_rules('stock_awal', 'Stock_awal', 'required');
+        $this->form_validation->set_message('required', '<div class="alert alert-danger" > <b><i class="fa fa-exclamation-circle"></i> {field}</b> harus diisi</div>');
+        if($this->form_validation->run() == FALSE) {
+        $this->load->view('dataBarang',$dataB);
+        }else{
+        $this->admin->masterData();
+
+        redirect('home/dataBarang');
+
+        }
+        // $reportMaster = 
+        // echo json_encode($reportMaster);
         
     }
 

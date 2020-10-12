@@ -51,58 +51,38 @@
 			<div class="col-xl-12">
 				<div class="card-box">
 				    <!-- <button id="btnScan" data-toggle="modal" data-target="#modalScan" class="btn btn-success btn- mb-4">SCAN BARANG MASUK</button> -->
-					<form>
+					<form action="" method="post">
 						<div class="row">
 							<div class="col">
-							<input type="text" class="form-control" placeholder="Material">
+							<input type="text" class="form-control" name="material_no" id="material_no" placeholder="Material No">
 							</div>
 							<div class="col">
-							<input type="text" class="form-control" placeholder="Label">
+							<input type="text" class="form-control" name="job_no" id="job_no" placeholder="Job No">
 							</div>
 						</div>
 						
 						<br>
 						<div class="row">
 							<div class="col">
-							<input type="text" class="form-control" placeholder="Job No">
+							<input type="text" class="form-control" name="type" id="type" placeholder="Type">
 							</div>
 							<div class="col">
-							<input type="text" class="form-control" placeholder="STL">
+							<input type="text" class="form-control" name="part_no" id="part_no" placeholder="Part No">
 							</div>
 						</div>
 						<br>
 						<div class="row">
 							<div class="col">
-							<input type="text" class="form-control" placeholder="Part Name">
+							<input type="text" class="form-control" name="quantity" id="quantity" placeholder="Quantity">
 							</div>
 							<div class="col">
-							<input type="text" class="form-control" placeholder="Color">
+							<input type="text" class="form-control" name="stock_awal" id="stock_awal" placeholder="Stock">
 							</div>
 						</div>
+						
 						<br>
 						<div class="row">
-							<div class="col">
-							<input type="text" class="form-control" placeholder="Type">
-							</div>
-							<div class="col">
-							<input type="text" class="form-control" placeholder="Stock">
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col">
-							<input type="text" class="form-control" placeholder="Part No">
-							</div>
-
-							<div class="col">
-							<input type="text" class="form-control" placeholder="Quantity">
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="col">
-							<input type="text" class="form-control" placeholder="First name">
-							</div>
+							
 							<div class="col">
 							<button type="submit" class="btn btn-primary">Submit</button>
 							</div>
@@ -141,41 +121,7 @@
 	</div> <!-- end container -->
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="modalScan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<form id="formScan">
-					<h4 class="text-center">Scan barcode barang sekarang</h4>
-                 
-					<div class="row">
-						<div class="col-12">
-							<div class="form-group">
-								<input type="text" class="form-control" name="jobNo" id="jobNo" style="opacity:0;">
-							</div>
-						</div>
-					</div>
-				</form>
-				<form id="formStock" class="hide-this">
-					<div class="row">
-						<div class="col-12">
-							<div class="form-group text-center">
-								<label for="">Jumlah stok yang akan ditambahkan</label>
-								<input type="number" class="form-control" name="stock" id="stock">
-							</div>
-						</div>
-						<div class="col-12">
-							<div class="form-group text-center">
-								<button class="btn btn-success">Tambah stok barang</button>
-							</div>
-						</div>
-					</div>
-				</form>
-        	</div>
-		</div>
-	</div>
-</div>
+
     
     
 <?php $this->load->view('templates/footer'); ?>
@@ -189,28 +135,7 @@
 <!-- App js-->
 <script src="<?php echo base_url();?>assets/js/app.min.js"></script>
 
-<script>
-	let jobNo = '';
-	
 
-	$('#formStock').on('submit', function(e){
-		let stock = $('#stock').val();
-		jobNo = jobNo.substr(0,7);
-		e.preventDefault();
-		$.ajax({
-			type: "POST",
-			url: "<?php echo site_url('products/update_stock');?>",
-			data: {jobNo:jobNo, stock:stock},
-			dataType: 'JSON',
-			success: function (response) {
-				
-			}
-		});
-	})
-
-	
-	
-</script>
 
 </body>
 

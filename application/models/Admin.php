@@ -43,6 +43,21 @@ class Admin extends CI_Model {
         return $this->db->get('product');
     }
 
+    function masterData(){
+         $dataMaster = array(
+             'material_no' => $this->input->post('material_no'),
+             'job_no' => $this->input->post('job_no'),
+             'type' => $this->input->post('type'),
+             'part_no' => $this->input->post('part_no'),
+             'quantity' => $this->input->post('quantity'),
+             'stock_awal' => $this->input->post('stock_awal')
+            
+        );
+        $result = $this->db->insert('product',$dataMaster);
+        return $result;
+
+    }
+
     function masukBarang(){
         $this->db->select('*') 
 		->from('data_in');
